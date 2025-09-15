@@ -1,0 +1,31 @@
+.actions {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: var(--border-radius);
+  background: #ccc;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+  }
+}
+
+.increment {
+  background: rgb(42, 128, 42);
+  color: white;
+}
+.reset {
+  background: rgb(140, 161, 140);
+  color: white;
+}

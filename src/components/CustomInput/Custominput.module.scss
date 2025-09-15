@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  flex: 1;
+  height: 30px;
+  padding-left: 10px;
+}
+.label {
+  width: 120px;
+  font-weight: 700;
+  margin-right: 16px;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.count {
+  margin-left: 10px;
+}

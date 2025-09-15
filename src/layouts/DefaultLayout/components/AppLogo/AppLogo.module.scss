@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 3.8rem;
+  height: 3.8rem;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+}
+.text {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-left: 1.6rem;
+}

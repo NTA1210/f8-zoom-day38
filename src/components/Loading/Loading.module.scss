@@ -1,0 +1,27 @@
+.wrapper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading {
+  width: 18px;
+  aspect-ratio: 1/1;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  border-top-color: #000;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,104 @@
+.wrapper {
+  position: relative;
+}
+
+.avatar {
+  position: relative;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ffd900, #b45264 93.68%);
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.crown {
+  position: absolute;
+  top: -2px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  padding: 8px 24px;
+  box-shadow: var(--box-shadow);
+  background: white;
+  border-radius: var(--border-radius);
+  z-index: 9999;
+  animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+.user {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  line-height: 1.5;
+
+  .avatar {
+    padding: 3px;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .crown {
+    width: 14px;
+    height: 14px;
+  }
+
+  .name {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .email {
+    font-size: 14px;
+    color: #757575;
+  }
+}
+
+.menu {
+  margin-top: 20px;
+  color: #666666;
+}
+
+.list {
+  a {
+    padding: 10px 0;
+    display: block;
+    font-size: 14px;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+.line {
+  margin: 8px 0;
+  border: none;
+  border-top: solid 1px rgba(0, 0, 0, 0.05);
+}
+
+@keyframes fadeOut {
+  from {
+    top: 40px;
+    opacity: 0;
+  }
+  to {
+    top: 46px;
+    opacity: 1;
+  }
+}

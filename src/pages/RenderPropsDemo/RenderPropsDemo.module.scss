@@ -1,0 +1,35 @@
+.wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.posts,
+.users {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+
+.post,
+.user {
+  position: relative;
+  padding-left: 12px;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+.post::before,
+.user::before {
+  content: "•"; /* gạch đầu dòng */
+  position: absolute;
+  left: 0;
+  color: black; /* màu bullet */
+}

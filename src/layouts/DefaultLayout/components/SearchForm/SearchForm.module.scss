@@ -1,0 +1,126 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  width: 42rem;
+  height: 4rem;
+  border-radius: 9999px;
+  border: 2px solid #ccc;
+  align-items: center;
+  padding: 0 1.6rem;
+  transition: all 0.3s ease-in-out;
+
+  &:focus-within {
+    border-color: black;
+  }
+}
+.search-icon {
+  width: 30px;
+  height: 32px;
+  opacity: 0.7;
+  border-radius: 50%;
+  background-size: 18px;
+  transition: opacity 0.2s ease-in-out;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3csvg%20id=%22Search-Icon%22%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2236%22%20height=%2236%22%20viewBox=%220%200%2036%2036%22%3e%3cg%20id=%22SMOCK%22%3e%3crect%20id=%22Canvas%22%20width=%2236%22%20height=%2236%22%20fill=%22rgba(68,68,68,0)%22/%3e%3c/g%3e%3cg%20id=%22ICONS%22%20transform=%22translate(1.103%200.969)%22%3e%3cpath%20id=%22Path_127042%22%20d=%22M35.4,32.5l-8.252-8.3A14.488,14.488,0,0,0,5.451,5.107,14.478,14.478,0,0,0,24.2,27.075l8.263,8.314A2.061,2.061,0,0,0,35.4,32.5ZM5.344,15.479A10.327,10.327,0,1,1,15.671,25.764,10.306,10.306,0,0,1,5.344,15.479Z%22%20transform=%22translate(-1.103%20-0.969)%22%20fill=%22%23444%22/%3e%3c/g%3e%3c/svg%3e");
+}
+
+.input {
+  border: none;
+  outline: none;
+  flex: 1;
+  height: 100%;
+  padding: 0 4px;
+}
+
+.clear-text {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  color: #ccc;
+}
+
+// SEARCH RESULTS
+.search-results {
+  position: absolute;
+  background: white;
+  top: 46px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  width: inherit;
+  left: 0;
+  padding: 12px 24px;
+  box-shadow: var(--box-shadow);
+  font-size: 14px;
+  opacity: 0;
+  animation: fadeOut 0.3s ease-in-out forwards;
+  z-index: 9999;
+
+  .icon {
+    width: 32.4px;
+    height: 32.4px;
+    border-radius: 50%;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    color: #0000008a;
+    padding: 6px 0 0;
+    gap: 8px;
+
+    .search-icon {
+      width: 14px;
+      height: 14px;
+      background-size: 14px;
+    }
+  }
+
+  .group-result {
+    .text {
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: #f05123;
+      }
+    }
+  }
+
+  .heading {
+    padding: 24px 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 12px;
+  }
+
+  .text {
+    color: #0000008a;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 0;
+    cursor: pointer;
+  }
+  .description {
+    color: #292929;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    top: 40px;
+  }
+  to {
+    top: 46px;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,147 @@
+.wrapper {
+  position: relative;
+}
+
+.icon {
+  padding: 7px;
+  cursor: pointer;
+
+  svg {
+    width: 17.5px;
+    height: 20px;
+    color: #707070;
+  }
+
+  .count {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #f05123;
+    color: white;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    animation: flashing 1s ease-in-out infinite;
+  }
+}
+
+@keyframes flashing {
+  0% {
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: 46px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  right: 0;
+  padding: 8px;
+  box-shadow: var(--box-shadow);
+  font-size: 14px;
+  opacity: 0;
+  animation: fadeOut 0.3s ease-in-out forwards;
+  z-index: 9999;
+  background: white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding: 12px 12px 8px 12px;
+
+  .title-notification {
+    font-size: 18px;
+  }
+
+  .viewAllBtn {
+    border: none;
+    background: inherit;
+    font-size: 14px;
+    color: #f05123;
+    padding: 4px 6px;
+
+    &:hover {
+      background: #f1f1f1;
+    }
+  }
+}
+
+.list {
+  max-height: 520px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px 8px 0;
+  margin-bottom: 8px;
+  line-height: 1.5;
+  min-width: 400px;
+  padding: 12px;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background: #f1f1f1;
+  }
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.title {
+  word-break: break-word;
+  font-size: 14px;
+}
+
+.time {
+  font-size: 13px;
+  color: #f05123;
+  font-weight: 500;
+}
+
+@keyframes fadeOut {
+  from {
+    top: 42px;
+    opacity: 0;
+  }
+  to {
+    top: 46px;
+    opacity: 1;
+  }
+}

@@ -1,5 +1,6 @@
 import classNames from "classnames/bind";
 import { useEffect, useImperativeHandle, forwardRef, useState } from "react";
+import PropTypes from "prop-types";
 
 //scss
 import styles from "./Modal.module.scss";
@@ -125,5 +126,22 @@ function Modal(
     </div>
   );
 }
+
+Modal.propTypes = {
+  children: PropTypes.node.isRequired,
+  isOpen: PropTypes.bool,
+  onAfterOpen: PropTypes.func,
+  onAfterClose: PropTypes.func,
+  onRequestOpen: PropTypes.func,
+  onRequestToggle: PropTypes.func,
+  onRequestClose: PropTypes.func,
+  closeTimeoutMS: PropTypes.number,
+  overlayClassName: PropTypes.string,
+  className: PropTypes.string,
+  bodyOpenClassName: PropTypes.string,
+  htmlOpenClassName: PropTypes.string,
+  shouldCloseOnOverlayClick: PropTypes.bool,
+  shouldCloseOnEsc: PropTypes.bool,
+};
 
 export default forwardRef(Modal);

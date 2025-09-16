@@ -179,7 +179,7 @@ function ModalDemo() {
       <Modal
         isOpen={isModalOpen2}
         onRequestClose={() => setIsModalOpen2(false)}
-        closeTimeoutMS={3000}
+        closeTimeoutMS={"3000"}
       >
         <div className={cx("content")}>
           <p>Đây là Custom Modal</p>
